@@ -54,13 +54,17 @@ body{
 	font-weight: bold;
 	height: 43px;
 	line-height: 3.05;
-	padding: 0 17px;
+	padding: 0 13px;
 	position: relative;
 	vertical-align: middle;
 	white-space: nowrap;
 	top: -311px;
 	left: -244px;
 	color: #333;
+}
+
+.unselected_menu_text{
+	color: #3b5998;
 }
 
 #cover_pic{
@@ -78,7 +82,7 @@ body{
 	padding: 4px;
 	width: 160px;
 	height: 159px;
-	border: 1px #999999 solid;
+	border: 1px #b2b2b2 solid;
 	position: relative;
 	z-index: 100;
 	float: left;
@@ -113,4 +117,92 @@ body{
 
 #menu_border_left{
 	border-left: 1px solid #e9eaed;
+}
+
+#header_elements_container{
+	width: 850px;
+	height: 40px;
+	/*border: 1px solid #000;*/
+	margin: 0 auto;	
+	position: relative;
+	right: 72px;
+}
+
+#container_right{
+	height: 40px;
+	width: 300px;
+	float: right;
+	position: relative;
+	left: 125px;
+}
+
+#logo-fb{
+	background: url(../img/logo_fb.JPG) no-repeat;
+	width: 27px;
+	height: 28px;
+	margin-top: 8px;
+	float: left;
+}
+
+#search-box{
+	width: 400px;
+	height: 22px;
+	background-color: #FFF;
+	border-radius: 3px;
+	float: left;
+	margin: 11px 0px 0px 8px;
+}
+
+#texto-search-box{
+	color: #6a7180;
+	vertical-align: middle;
+	padding-left: 7px;
+	font-size: 14px;
+}
+
+#mini_foto_header{
+	width: 19px;
+	height: 19px;
+	background: url(../img/profile_pic.JPG) no-repeat;
+	background-size: 19px 19px;
+	float: left;
+	margin-top: 12px;
+	box-shadow: 0px 0px 1px 1px #666;
+	border-radius: 3px;
+}
+
+#friend_request{
+	width: 24px;
+	height: 28px;
+	background: url(../img/friend_request.png) no-repeat;
+	float: left;
+	margin: 7px 0px 0px 39px;
+}
+
+#nombre_header{
+	float: left;
+	font-family: 'Helvetica Neue', Helvetica, Arial, 'lucida grande',tahoma,verdana,arial,sans-serif;
+	text-shadow: 0 -1px rgba(0, 0, 0, .5);
+	color: #FFF;
+	font-size: 12px;
+	font-weight: bold;
+	margin: 15px 8px 0px 8px;
+}
+
+#separador_header{
+	height: 17px;
+	width: 1px;
+	border-left: 1px solid rgba(64, 63, 133, 0.85);
+	float: left;
+	margin: 12px 9px 0px 0px;
+}
+
+#inicio_header{
+	float: left;
+	font-family: 'Helvetica Neue', Helvetica, Arial, 'lucida grande',tahoma,verdana,arial,sans-serif;
+	text-shadow: 0 -1px rgba(0, 0, 0, .5);
+	color: #FFF;
+	font-size: 12px;
+	font-weight: bold;
+	margin: 15px 8px 0px 0px;
 }
