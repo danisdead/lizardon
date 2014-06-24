@@ -4,9 +4,44 @@
 		<title>Clamato</title>
 		<link rel="stylesheet" type="text/css" href="css/estilos.css">
 		<script type="text/javascript" src="js/jquery-2.0.0.min.js"></script>
-		<script type="text/javascript" src="js/snow.js"></script>
+		<script type="text/javascript" src="js/snow.js"></script>		
+		<script>
+/*$(function() {
+    $(document).snow({ SnowImage: "clumsychic_confetti.png", Quantity: 25 });
+});
+*/
+function () {
+    var outputCanvas = document.getElementById('output'),
+        output = outputCanvas.getContext('2d'),
+        bufferCanvas = document.getElementById('buffer'),
+        buffer = bufferCanvas.getContext('2d'),
+        video = document.getElementById('video'),
+        width = outputCanvas.width,
+        height = outputCanvas.height,
+        interval;
+
+    function processFrame()	{
+        buffer.drawImage(video, 0, 0);
+
+        // this can be done without alphaData, except in Firefox which doesn't like it when image is bigger than the canvas
+        var image = buffer.getImageData(0, 0, width, height),
+            imageData = image.data,
+            alphaData = buffer.getImageData(0, height, width, height).data;
+
+        for (var i = 3, len = imageData.length; i < len; i = i + 4) {
+            imageData[i] = alphaData[i - 1];
+        }
+
+        output.putImageData(image, 0, 0, 0, 0, width, height);
+    }
+}
+
+
+
+</script>
 	</head>
 <body>
+
 	 <script>
 
 	    window.fbAsyncInit = function() {
@@ -125,7 +160,7 @@
 		<div id="container_profile_pic">
 			<div id="profile_pic"></div>
 		</div>
-		<span id="profile_name">Clamato Fiesta</span>
+		<span id="profile_name">Dan Garc&iacute;a</span>
 		<div id="container_pic_info_menu">
 			<div class="menu_text"></div>
 			<div class="menu_text">Biograf&iacute;a</div>
@@ -143,10 +178,26 @@
 
 	<div id="status">
 	</div>
-	<script type="text/javascript">
-$(function() {
-    $(document).snow({ SnowImage: "clumsychic_confetti.png", Quantity: 25 });
-});
-</script>
+	           <div id="flashadd">
+           
+     <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="100%" height="1400" id="Test Video" align="top" style="position:absolute; z-index:200" >
+<param name="movie" value="video.swf" />
+				<param name="quality" value="high" />
+				<param name="bgcolor" value="#ffffff" />
+				<param name="play" value="true" />
+				<param name="loop" value="true" />
+				<param name="wmode" value="transparent" />
+				<param name="scale" value="noscale" />
+				<param name="menu" value="true" />
+				<param name="devicefont" value="false" />
+				<param name="salign" value="center" />
+				<param name="allowScriptAccess" value="sameDomain" />
+
+<embed src="video.swf" quality="high" wmode="transparent" bgcolor="#ffffff" width="100%" height="1400" name="Test Video" align="top" allowScriptAccess="sameDomain" allowFullScreen="true" scale="noscale" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+</object>
+
+</div> 
+
+
 </body>
 </html>
